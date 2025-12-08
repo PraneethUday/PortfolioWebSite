@@ -25,7 +25,7 @@
 }
 
 .project-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -124,12 +124,12 @@
   .projects-section {
     padding: 3rem 1rem;
   }
-  
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .project-card {
     padding: 1.5rem;
   }

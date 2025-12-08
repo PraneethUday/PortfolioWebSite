@@ -1,4 +1,4 @@
-import './Education.css';
+import "./Education.css";
 
 export default function Education() {
   const education = [
@@ -7,22 +7,22 @@ export default function Education() {
       degree: "B.Tech in Computer Science Engineering",
       institution: "Amrita Vishwa Vidyapeetham",
       score: "GPA: 7.98/10.0",
-      status: "Pursuing"
+      status: "Pursuing",
     },
     {
       period: "2023",
       degree: "Class 12th (Higher Secondary)",
       institution: "State Board",
       score: "92.67%",
-      status: "Completed"
+      status: "Completed",
     },
     {
       period: "2021",
       degree: "Class 10th (Secondary)",
       institution: "State Board",
       score: "Pass (Exams cancelled due to COVID-19)",
-      status: "Completed"
-    }
+      status: "Completed",
+    },
   ];
 
   return (

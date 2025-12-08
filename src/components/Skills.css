@@ -22,7 +22,7 @@
 }
 
 .skill-category::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -85,20 +85,20 @@
   .skills-section {
     padding: 3rem 1rem;
   }
-  
+
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .skill-category {
     padding: 1.5rem;
   }
-  
+
   .skills-tags {
     gap: 0.5rem;
   }
-  
+
   .skill-tag {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
