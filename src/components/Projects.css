@@ -1,0 +1,136 @@
+.projects-section {
+  padding: 5rem 2rem;
+  min-height: 100vh;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.project-tech {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  width: fit-content;
+}
+
+.project-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.project-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.highlight-tag {
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.02);
+}
+
+.project-link .icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 3rem 1rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    padding: 1.5rem;
+  }
+}
