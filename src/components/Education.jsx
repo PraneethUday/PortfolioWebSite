@@ -1,6 +1,58 @@
-import "./Education.css";
+import { useEffect, useRef, useState } from 'react';
+import './Education.css';
 
 export default function Education() {
+  const [visibleItems, setVisibleItems] = useState([]);
+  const [sectionVisible, setSectionVisible] = useState(false);
+  const itemRefs = useRef([]);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const currentSection = sectionRef.current;
+    const sectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setSectionVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (currentSection) {
+      sectionObserver.observe(currentSection);
+    }
+
+    const currentRefs = itemRefs.current;
+    const observers = currentRefs.map((item, index) => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              setVisibleItems(prev => [...new Set([...prev, index])]);
+            }, index * 150);
+          }
+        },
+        { threshold: 0.3 }
+      );
+
+      if (item) {
+        observer.observe(item);
+      }
+      return observer;
+    });
+
+    return () => {
+      if (currentSection) {
+        sectionObserver.unobserve(currentSection);
+      }
+      observers.forEach((observer, index) => {
+        if (currentRefs[index]) {
+          observer.unobserve(currentRefs[index]);
+        }
+      });
+    };
+  }, []);
+
   const education = [
     {
       period: "2023 – 2027",
@@ -26,12 +78,16 @@ export default function Education() {
   ];
 
   return (
-    <section className="education-section" id="education">
+    <section className={`education-section ${sectionVisible ? 'animated' : ''}`} id="education" ref={sectionRef}>
       <div className="container">
         <h2 className="section-title">Education</h2>
         <div className="timeline">
           {education.map((edu, index) => (
-            <div key={index} className="timeline-item">
+            <div 
+              key={index} 
+              ref={el => itemRefs.current[index] = el}
+              className={`timeline-item ${visibleItems.includes(index) ? 'reveal' : ''}`}
+            >
               <div className="timeline-dot"></div>
               <div className="timeline-content">
                 <span className="timeline-period">{edu.period}</span>

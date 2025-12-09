@@ -1,6 +1,58 @@
-import "./Projects.css";
+import { useEffect, useRef, useState } from 'react';
+import './Projects.css';
 
 export default function Projects() {
+  const [visibleCards, setVisibleCards] = useState([]);
+  const [sectionVisible, setSectionVisible] = useState(false);
+  const cardRefs = useRef([]);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const currentSection = sectionRef.current;
+    const sectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setSectionVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (currentSection) {
+      sectionObserver.observe(currentSection);
+    }
+
+    const currentRefs = cardRefs.current;
+    const observers = currentRefs.map((card, index) => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              setVisibleCards(prev => [...new Set([...prev, index])]);
+            }, index * 100);
+          }
+        },
+        { threshold: 0.2 }
+      );
+
+      if (card) {
+        observer.observe(card);
+      }
+      return observer;
+    });
+
+    return () => {
+      if (currentSection) {
+        sectionObserver.unobserve(currentSection);
+      }
+      observers.forEach((observer, index) => {
+        if (currentRefs[index]) {
+          observer.unobserve(currentRefs[index]);
+        }
+      });
+    };
+  }, []);
+
   const projects = [
     {
       title: "Online Functional Blood Bank",
@@ -45,12 +97,16 @@ export default function Projects() {
   ];
 
   return (
-    <section className="projects-section" id="projects">
+    <section className={`projects-section ${sectionVisible ? 'animated' : ''}`} id="projects" ref={sectionRef}>
       <div className="container">
         <h2 className="section-title">Featured Projects</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="project-card">
+            <div 
+              key={index} 
+              ref={el => cardRefs.current[index] = el}
+              className={`project-card ${visibleCards.includes(index) ? 'reveal' : ''}`}
+            >
               <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>
                 <span className="project-tech">{project.tech}</span>

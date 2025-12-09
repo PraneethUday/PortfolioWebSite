@@ -1,6 +1,58 @@
-import "./Skills.css";
+import { useEffect, useRef, useState } from 'react';
+import './Skills.css';
 
 export default function Skills() {
+  const [visibleCategories, setVisibleCategories] = useState([]);
+  const [sectionVisible, setSectionVisible] = useState(false);
+  const categoryRefs = useRef([]);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const currentSection = sectionRef.current;
+    const sectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setSectionVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (currentSection) {
+      sectionObserver.observe(currentSection);
+    }
+
+    const currentRefs = categoryRefs.current;
+    const observers = currentRefs.map((category, index) => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              setVisibleCategories(prev => [...new Set([...prev, index])]);
+            }, index * 80);
+          }
+        },
+        { threshold: 0.2 }
+      );
+
+      if (category) {
+        observer.observe(category);
+      }
+      return observer;
+    });
+
+    return () => {
+      if (currentSection) {
+        sectionObserver.unobserve(currentSection);
+      }
+      observers.forEach((observer, index) => {
+        if (currentRefs[index]) {
+          observer.unobserve(currentRefs[index]);
+        }
+      });
+    };
+  }, []);
+
   const skillCategories = [
     {
       category: "Programming Languages",
@@ -65,12 +117,16 @@ export default function Skills() {
   ];
 
   return (
-    <section className="skills-section" id="skills">
+    <section className={`skills-section ${sectionVisible ? 'animated' : ''}`} id="skills" ref={sectionRef}>
       <div className="container">
         <h2 className="section-title">Skills & Technologies</h2>
         <div className="skills-grid">
           {skillCategories.map((category, index) => (
-            <div key={index} className="skill-category">
+            <div 
+              key={index} 
+              ref={el => categoryRefs.current[index] = el}
+              className={`skill-category ${visibleCategories.includes(index) ? 'reveal' : ''}`}
+            >
               <h3 className="category-title">{category.category}</h3>
               <div className="skills-tags">
                 {category.skills.map((skill, i) => (

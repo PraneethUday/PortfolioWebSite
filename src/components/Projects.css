@@ -16,12 +16,36 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 2rem;
-  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   position: relative;
   overflow: hidden;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), all 0.3s ease;
+}
+
+.projects-section:not(.animated) .project-card {
+  opacity: 0;
+  transform: translateY(60px) scale(0.9);
+}
+
+.projects-section.animated .project-card.reveal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.projects-section.animated .project-card:nth-child(1).reveal {
+  transition-delay: 0.3s;
+}
+
+.projects-section.animated .project-card:nth-child(2).reveal {
+  transition-delay: 0.5s;
+}
+
+.projects-section.animated .project-card:nth-child(3).reveal {
+  transition-delay: 0.7s;
 }
 
 .project-card::before {

@@ -1,8 +1,34 @@
+import { useEffect, useRef, useState } from 'react';
 import "./About.css";
 
 export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const currentSection = sectionRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
+
+    return () => {
+      if (currentSection) {
+        observer.unobserve(currentSection);
+      }
+    };
+  }, []);
+
   return (
-    <section className="about-section" id="about">
+    <section className={`about-section ${isVisible ? 'animated' : ''}`} id="about" ref={sectionRef}>
       <div className="container">
         <h2 className="section-title">Technical Overview</h2>
         <div className="about-content">

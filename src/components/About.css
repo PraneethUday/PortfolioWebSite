@@ -9,6 +9,19 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s, transform 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
+
+.about-section:not(.animated) .container {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.about-section.animated .container {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-title {
