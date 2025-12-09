@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import './Skills.css';
+import { useEffect, useRef, useState } from "react";
+import "./Skills.css";
 
 export default function Skills() {
   const [visibleCategories, setVisibleCategories] = useState([]);
@@ -28,7 +28,7 @@ export default function Skills() {
         ([entry]) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              setVisibleCategories(prev => [...new Set([...prev, index])]);
+              setVisibleCategories((prev) => [...new Set([...prev, index])]);
             }, index * 80);
           }
         },
@@ -117,15 +117,21 @@ export default function Skills() {
   ];
 
   return (
-    <section className={`skills-section ${sectionVisible ? 'animated' : ''}`} id="skills" ref={sectionRef}>
+    <section
+      className={`skills-section ${sectionVisible ? "animated" : ""}`}
+      id="skills"
+      ref={sectionRef}
+    >
       <div className="container">
         <h2 className="section-title">Skills & Technologies</h2>
         <div className="skills-grid">
           {skillCategories.map((category, index) => (
-            <div 
-              key={index} 
-              ref={el => categoryRefs.current[index] = el}
-              className={`skill-category ${visibleCategories.includes(index) ? 'reveal' : ''}`}
+            <div
+              key={index}
+              ref={(el) => (categoryRefs.current[index] = el)}
+              className={`skill-category ${
+                visibleCategories.includes(index) ? "reveal" : ""
+              }`}
             >
               <h3 className="category-title">{category.category}</h3>
               <div className="skills-tags">

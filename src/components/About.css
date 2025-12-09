@@ -11,7 +11,8 @@
   width: 100%;
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s, transform 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s,
+    transform 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
 }
 
 .about-section:not(.animated) .container {

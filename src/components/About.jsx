@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 import "./About.css";
 
 export default function About() {
@@ -28,7 +28,11 @@ export default function About() {
   }, []);
 
   return (
-    <section className={`about-section ${isVisible ? 'animated' : ''}`} id="about" ref={sectionRef}>
+    <section
+      className={`about-section ${isVisible ? "animated" : ""}`}
+      id="about"
+      ref={sectionRef}
+    >
       <div className="container">
         <h2 className="section-title">Technical Overview</h2>
         <div className="about-content">

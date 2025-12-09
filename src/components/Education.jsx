@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import './Education.css';
+import { useEffect, useRef, useState } from "react";
+import "./Education.css";
 
 export default function Education() {
   const [visibleItems, setVisibleItems] = useState([]);
@@ -28,7 +28,7 @@ export default function Education() {
         ([entry]) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              setVisibleItems(prev => [...new Set([...prev, index])]);
+              setVisibleItems((prev) => [...new Set([...prev, index])]);
             }, index * 150);
           }
         },
@@ -78,15 +78,21 @@ export default function Education() {
   ];
 
   return (
-    <section className={`education-section ${sectionVisible ? 'animated' : ''}`} id="education" ref={sectionRef}>
+    <section
+      className={`education-section ${sectionVisible ? "animated" : ""}`}
+      id="education"
+      ref={sectionRef}
+    >
       <div className="container">
         <h2 className="section-title">Education</h2>
         <div className="timeline">
           {education.map((edu, index) => (
-            <div 
-              key={index} 
-              ref={el => itemRefs.current[index] = el}
-              className={`timeline-item ${visibleItems.includes(index) ? 'reveal' : ''}`}
+            <div
+              key={index}
+              ref={(el) => (itemRefs.current[index] = el)}
+              className={`timeline-item ${
+                visibleItems.includes(index) ? "reveal" : ""
+              }`}
             >
               <div className="timeline-dot"></div>
               <div className="timeline-content">

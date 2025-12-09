@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import './Projects.css';
+import { useEffect, useRef, useState } from "react";
+import "./Projects.css";
 
 export default function Projects() {
   const [visibleCards, setVisibleCards] = useState([]);
@@ -28,7 +28,7 @@ export default function Projects() {
         ([entry]) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              setVisibleCards(prev => [...new Set([...prev, index])]);
+              setVisibleCards((prev) => [...new Set([...prev, index])]);
             }, index * 100);
           }
         },
@@ -97,15 +97,21 @@ export default function Projects() {
   ];
 
   return (
-    <section className={`projects-section ${sectionVisible ? 'animated' : ''}`} id="projects" ref={sectionRef}>
+    <section
+      className={`projects-section ${sectionVisible ? "animated" : ""}`}
+      id="projects"
+      ref={sectionRef}
+    >
       <div className="container">
         <h2 className="section-title">Featured Projects</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div 
-              key={index} 
-              ref={el => cardRefs.current[index] = el}
-              className={`project-card ${visibleCards.includes(index) ? 'reveal' : ''}`}
+            <div
+              key={index}
+              ref={(el) => (cardRefs.current[index] = el)}
+              className={`project-card ${
+                visibleCards.includes(index) ? "reveal" : ""
+              }`}
             >
               <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>
