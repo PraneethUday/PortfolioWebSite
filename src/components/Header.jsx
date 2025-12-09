@@ -54,6 +54,67 @@ export default function Header() {
             </svg>
             Phone
           </a>
+          <a
+            href="https://drive.google.com/file/d/1tuk4pFqkH_7kesYj4eJ19crgkj087qDK/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <svg
+              className="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Outer loop shape (inspired by the LeetCode "path") */}
+              <path
+                d="M9 4C7 6 5.75 7.75 5 9.5C4.5 10.75 4.5 12 5 13.25C5.75 15 7 16.75 9 18.5"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              {/* Inner hook */}
+              <path
+                d="M11 6.5C9.9 7.5 9.2 8.4 8.8 9.3C8.5 9.9 8.5 10.6 8.8 11.2C9.2 12.1 9.9 13 11 14"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              {/* Right angle-like element */}
+              <path
+                d="M13.5 8H18C18.8 8 19.5 8.7 19.5 9.5V14"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              {/* Small "code node" circle */}
+              <circle cx="18" cy="16.5" r="1.4" fill="currentColor" />
+            </svg>
+            LeetCode
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1tuk4pFqkH_7kesYj4eJ19crgkj087qDK/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <svg
+              className="icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M6 2C4.895 2 4 2.895 4 4V20C4 21.105 4.895 22 6 22H18C19.105 22 20 21.105 20 20V8L14 2H6Z" />
+              <path d="M14 2V8H20" />
+              <rect x="7" y="10" width="10" height="2" rx="1" />
+              <rect x="7" y="14" width="10" height="2" rx="1" />
+              <rect x="7" y="18" width="6" height="2" rx="1" />
+            </svg>
+            Resume
+          </a>
         </div>
       </div>
     </header>

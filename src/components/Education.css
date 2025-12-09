@@ -145,15 +145,15 @@
 }
 
 .timeline-status.pursuing {
-  background: rgba(76, 175, 80, 0.2);
-  border-color: rgba(76, 175, 80, 0.5);
-  color: #4caf50;
+  background: rgba(206, 212, 34, 0.2);
+  border-color: rgba(175, 170, 76, 0.5);
+  color: #a2af4c;
 }
 
 .timeline-status.completed {
   background: rgba(33, 150, 243, 0.2);
   border-color: rgba(33, 150, 243, 0.5);
-  color: #2196f3;
+  color: #21f32c;
 }
 
 @media (max-width: 768px) {

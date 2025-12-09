@@ -94,6 +94,48 @@ export default function Projects() {
         "Sensor Fusion",
       ],
     },
+    {
+      title: "Edge-Enabled DRL Based Cooperative Perception in Vehicles",
+      tech: "Deep Reinforcement Learning",
+      description:
+        "Research project implementing edge computing and deep reinforcement learning for cooperative perception in autonomous vehicles. Focuses on optimizing sensor data sharing and decision-making in vehicle-to-vehicle communication networks.",
+      github:
+        "https://github.com/23CSE362-edge-computing-2025-26-odd/capstone-project-01_epicfailures",
+      highlights: [
+        "Edge Computing",
+        "DRL Algorithms",
+        "V2V Communication",
+        "Sensor Fusion",
+      ],
+    },
+    {
+      title: "Edge-Enabled DRL Based Cooperative Perception in Vehicles",
+      tech: "Deep Reinforcement Learning",
+      description:
+        "Research project implementing edge computing and deep reinforcement learning for cooperative perception in autonomous vehicles. Focuses on optimizing sensor data sharing and decision-making in vehicle-to-vehicle communication networks.",
+      github:
+        "https://github.com/23CSE362-edge-computing-2025-26-odd/capstone-project-01_epicfailures",
+      highlights: [
+        "Edge Computing",
+        "DRL Algorithms",
+        "V2V Communication",
+        "Sensor Fusion",
+      ],
+    },
+    {
+      title: "Edge-Enabled DRL Based Cooperative Perception in Vehicles",
+      tech: "Deep Reinforcement Learning",
+      description:
+        "Research project implementing edge computing and deep reinforcement learning for cooperative perception in autonomous vehicles. Focuses on optimizing sensor data sharing and decision-making in vehicle-to-vehicle communication networks.",
+      github:
+        "https://github.com/23CSE362-edge-computing-2025-26-odd/capstone-project-01_epicfailures",
+      highlights: [
+        "Edge Computing",
+        "DRL Algorithms",
+        "V2V Communication",
+        "Sensor Fusion",
+      ],
+    },
   ];
 
   return (
