@@ -58,7 +58,7 @@ export default function Education() {
       period: "2023 – 2027",
       degree: "B.Tech in Computer Science Engineering",
       institution: "Amrita Vishwa Vidyapeetham",
-      score: "GPA: 7.98/10.0",
+      score: "GPA: 7.82/10.0",
       status: "Pursuing",
     },
     {

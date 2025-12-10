@@ -52,7 +52,7 @@ export default function About() {
             technologies.
           </p>
           <p className="about-text">
-            Currently maintaining a GPA of 7.98/10.0, I'm actively exploring
+            Currently maintaining a GPA of 7.82/10.0, I'm actively exploring
             edge computing, deep reinforcement learning, and their applications
             in real-world systems like autonomous vehicles and smart IoT
             solutions.
