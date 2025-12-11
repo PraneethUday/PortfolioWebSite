@@ -55,7 +55,7 @@ export default function Header() {
             Phone
           </a>
           <a
-            href="https://drive.google.com/file/d/1tuk4pFqkH_7kesYj4eJ19crgkj087qDK/view?usp=sharing"
+            href="https://leetcode.com/u/4SlYWN7fFQ/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
@@ -96,7 +96,7 @@ export default function Header() {
             LeetCode
           </a>
           <a
-            href="https://drive.google.com/file/d/1tuk4pFqkH_7kesYj4eJ19crgkj087qDK/view?usp=sharing"
+            href="https://drive.google.com/file/d/16kfF7wZeaSguxUOSQ-9tsFmTkq0XCjZx/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
