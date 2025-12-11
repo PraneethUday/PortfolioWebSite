@@ -17,7 +17,8 @@ export default function Header() {
           <span className="name-letter">U</span>
         </h1>
         <p className="title-text">
-          3rd-year CSE student | Embedded Systems & Web Developer
+          3rd-year CSE student | Passionate Web Developer | Aspiring Software
+          Engineer | Problem Solver
         </p>
         <div className="social-links">
           <a
