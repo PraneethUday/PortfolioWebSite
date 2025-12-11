@@ -18,7 +18,7 @@ export default function Header() {
         </h1>
         <p className="title-text">
           3rd-year CSE student | Passionate Web Developer | Aspiring Software
-          Engineer | Problem Solver
+          Engineer
         </p>
         <div className="social-links">
           <a
