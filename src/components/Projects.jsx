@@ -59,7 +59,7 @@ export default function Projects() {
       tech: "Flask, Leaflet.js, OpenStreetMap",
       description:
         "A web-based navigation system for real-time route planning with interactive map visualization and waypoint support. Built with Flask backend, Leaflet.js for mapping, and OpenStreetMap for geographic data. Features REST APIs for dynamic route optimization and real-time tracking.",
-      github: "https://github.com/PraneethUday/Navigation-System",
+      github: "https://github.com/PraneethUday/NavigationSystem",
       highlights: [
         "Real-time Route Planning",
         "Interactive Maps",
