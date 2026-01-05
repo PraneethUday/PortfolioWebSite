@@ -55,29 +55,55 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Online Functional Blood Bank",
+      title: "Navigation System – Interactive Web-Based Route Planner",
+      tech: "Flask, Leaflet.js, OpenStreetMap",
+      description:
+        "A web-based navigation system for real-time route planning with interactive map visualization and waypoint support. Built with Flask backend, Leaflet.js for mapping, and OpenStreetMap for geographic data. Features REST APIs for dynamic route optimization and real-time tracking.",
+      github: "https://github.com/PraneethUday/Navigation-System",
+      highlights: [
+        "Real-time Route Planning",
+        "Interactive Maps",
+        "Waypoint Support",
+        "REST APIs",
+      ],
+    },
+    {
+      title: "BloodNet – Online Functional Blood Bank",
       tech: "MERN Stack",
       description:
-        "A comprehensive full-stack web application for blood bank management featuring real-time inventory tracking, donor management, and request handling. Built with MongoDB, Express.js, React.js, and Node.js with JWT authentication and RESTful API design.",
+        "A full-stack blood bank platform enabling donor management, blood requests, and secure role-based access control. Built with MongoDB, Express.js, React.js, and Node.js featuring JWT authentication, real-time inventory tracking, and comprehensive request handling.",
       github: "https://github.com/PraneethUday/BloodBank",
       highlights: [
-        "Real-time inventory",
+        "Donor Management",
         "JWT Authentication",
-        "REST API",
-        "Responsive Design",
+        "Role-based Access",
+        "Real-time Inventory",
       ],
     },
     {
       title: "RFID-Based Voting System",
-      tech: "STM32F401",
+      tech: "STM32F401, Embedded C",
       description:
-        "A secure embedded voting system using RFID technology on STM32F401 microcontroller. Implements voter authentication, real-time vote counting, and tamper-proof design with UART communication and LCD display integration.",
+        "An embedded voting system with RFID-based voter authentication and secure real-time vote counting. Designed on STM32F401 microcontroller with tamper-proof architecture, UART communication, and LED status indicators for voter verification.",
       github: "https://github.com/PraneethUday/RFID-Voting-System",
       highlights: [
         "RFID Authentication",
-        "STM32 Programming",
-        "UART Protocol",
-        "Real-time Processing",
+        "Real-time Counting",
+        "Embedded C",
+        "Secure Design",
+      ],
+    },
+    {
+      title: "ScrapeSense – AI-Powered Web Scraper",
+      tech: "React, TypeScript, Node.js, Chrome Extensions",
+      description:
+        "An AI-powered Chrome extension for intelligent web scraping, summarization, and chatbot-based assistance. Features advanced content extraction, AI-driven summarization of scraped data, and conversational interface for data interaction.",
+      github: "https://github.com/PraneethUday/ScrapeSense",
+      highlights: [
+        "Chrome Extension",
+        "AI Summarization",
+        "Web Scraping",
+        "Chatbot Integration",
       ],
     },
     {
