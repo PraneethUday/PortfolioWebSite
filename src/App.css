@@ -3,36 +3,33 @@
   z-index: 1;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.3);
+  background: #0F0F0F;
+  border-left: 2px solid #2A2A2A;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #667eea, #764ba2);
-  border-radius: 5px;
+  background: #FFE500;
+  border: 2px solid #0F0F0F;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #764ba2, #667eea);
+  background: #FF3B00;
 }
 
-/* Selection color */
 ::selection {
-  background: rgba(102, 126, 234, 0.5);
-  color: white;
+  background: #FFE500;
+  color: #0F0F0F;
 }
 
-/* Responsive utilities */
 @media (max-width: 1024px) {
   .content {
     padding: 0;

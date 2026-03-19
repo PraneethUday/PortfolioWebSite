@@ -1,6 +1,7 @@
 .projects-section {
   padding: 5rem 2rem;
   min-height: 100vh;
+  border-bottom: 3px solid #2A2A2A;
 }
 
 .projects-grid {
@@ -11,20 +12,20 @@
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  background: #1A1A1A;
+  border: 2px solid #FFFFFF;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   opacity: 1;
   transform: translateY(0) scale(1);
   transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), all 0.3s ease;
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.1s ease;
+  box-shadow: 6px 6px 0px #FFE500;
 }
 
 .projects-section:not(.animated) .project-card {
@@ -37,66 +38,56 @@
   transform: translateY(0) scale(1);
 }
 
-.projects-section.animated .project-card:nth-child(1).reveal {
-  transition-delay: 0.3s;
-}
-
-.projects-section.animated .project-card:nth-child(2).reveal {
-  transition-delay: 0.5s;
-}
-
-.projects-section.animated .project-card:nth-child(3).reveal {
-  transition-delay: 0.7s;
-}
+.projects-section.animated .project-card:nth-child(1).reveal { transition-delay: 0.3s; }
+.projects-section.animated .project-card:nth-child(2).reveal { transition-delay: 0.5s; }
+.projects-section.animated .project-card:nth-child(3).reveal { transition-delay: 0.7s; }
 
 .project-card::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  height: 5px;
+  background: #FFE500;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.project-card:hover::before {
-  transform: scaleX(1);
+  transform: translate(6px, 6px);
+  box-shadow: none;
 }
 
 .project-header {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .project-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #FFFFFF;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
 }
 
 .project-tech {
   display: inline-block;
-  padding: 0.4rem 1rem;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: white;
+  padding: 0.3rem 0.8rem;
+  background: #FF3B00;
+  border: 2px solid #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #FFFFFF;
   width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .project-description {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
   font-size: 0.95rem;
   flex-grow: 1;
@@ -109,13 +100,14 @@
 }
 
 .highlight-tag {
-  padding: 0.3rem 0.8rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  background: transparent;
+  border: 2px solid #FFE500;
+  font-size: 0.78rem;
+  color: #FFE500;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .project-link {
@@ -124,25 +116,29 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  color: white;
+  background: #0F0F0F;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   margin-top: auto;
+  box-shadow: 4px 4px 0px #00FF94;
+  transition: box-shadow 0.1s ease, transform 0.1s ease, background 0.1s ease, color 0.1s ease;
 }
 
 .project-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
-  transform: scale(1.02);
+  background: #00FF94;
+  color: #0F0F0F;
+  box-shadow: none;
+  transform: translate(4px, 4px);
 }
 
 .project-link .icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 @media (max-width: 768px) {
@@ -157,5 +153,6 @@
 
   .project-card {
     padding: 1.5rem;
+    box-shadow: 4px 4px 0px #FFE500;
   }
 }

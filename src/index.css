@@ -5,14 +5,12 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background-color: #000;
-  color: white;
+  background-color: #0F0F0F;
+  color: #FFFFFF;
 }
 
 #root {
@@ -20,16 +18,14 @@ body {
   min-height: 100vh;
 }
 
-/* Prevent layout shift */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Focus styles for accessibility */
 a:focus,
 button:focus {
-  outline: 2px solid rgba(102, 126, 234, 0.8);
+  outline: 3px solid #FFE500;
   outline-offset: 2px;
 }
