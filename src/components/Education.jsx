@@ -84,7 +84,7 @@ export default function Education() {
       ref={sectionRef}
     >
       <div className="container">
-        <h2 className="section-title">Education</h2>
+        <h2 className="section-title" data-parallax="0.25">Education</h2>
         <div className="timeline">
           {education.map((edu, index) => (
             <div

@@ -34,7 +34,7 @@ export default function About() {
       ref={sectionRef}
     >
       <div className="container">
-        <h2 className="section-title">Technical Overview</h2>
+        <h2 className="section-title" data-parallax="0.25">Technical Overview</h2>
         <div className="about-content">
           <p className="about-text">
             I'm a passionate 3rd-year Computer Science Engineering student at

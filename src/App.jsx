@@ -5,10 +5,15 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
+import useSmoothScroll from "./hooks/useSmoothScroll";
+import useParallax from "./hooks/useParallax";
 import "./App.css";
 
 
 function App() {
+  useSmoothScroll();
+  useParallax();
+
   return (
     <>
       <Aurora

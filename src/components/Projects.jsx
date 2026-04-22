@@ -155,7 +155,7 @@ export default function Projects() {
       ref={sectionRef}
     >
       <div className="container">
-        <h2 className="section-title">Featured Projects</h2>
+        <h2 className="section-title" data-parallax="0.25">Featured Projects</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div

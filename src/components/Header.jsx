@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="header" id="home">
       <div className="hero-section">
-        <h1 className="animated-name">
+        <h1 className="animated-name" data-parallax="0.15">
           <span className="name-letter">P</span>
           <span className="name-letter">r</span>
           <span className="name-letter">a</span>
@@ -16,11 +16,11 @@ export default function Header() {
           <span className="name-space"> </span>
           <span className="name-letter">U</span>
         </h1>
-        <p className="title-text">
+        <p className="title-text" data-parallax="0.28">
           3rd-year CSE student | Passionate Web Developer | Aspiring Software
           Engineer
         </p>
-        <div className="social-links">
+        <div className="social-links" data-parallax="0.4">
           <a
             href="https://github.com/PraneethUday"
             target="_blank"

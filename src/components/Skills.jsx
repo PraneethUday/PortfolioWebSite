@@ -123,7 +123,7 @@ export default function Skills() {
       ref={sectionRef}
     >
       <div className="container">
-        <h2 className="section-title">Skills & Technologies</h2>
+        <h2 className="section-title" data-parallax="0.25">Skills & Technologies</h2>
         <div className="skills-grid">
           {skillCategories.map((category, index) => (
             <div
