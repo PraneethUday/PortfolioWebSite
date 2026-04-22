@@ -4,10 +4,10 @@ import Lenis from "lenis";
 export default function useSmoothScroll() {
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.14,
-      smoothWheel: true,
-      wheelMultiplier: 1.1,
-      touchMultiplier: 1.8,
+      lerp: 0.5,
+      smoothWheel: false,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
       syncTouch: false,
     });
 
@@ -30,7 +30,7 @@ export default function useSmoothScroll() {
       const el = document.getElementById(id);
       if (el) {
         e.preventDefault();
-        lenis.scrollTo(el, { offset: -64, duration: 0.9 });
+        lenis.scrollTo(el, { offset: -64, duration: 0.7 });
       }
     };
     document.addEventListener("click", handleAnchor);

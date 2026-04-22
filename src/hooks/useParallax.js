@@ -41,7 +41,7 @@ export default function useParallax() {
         const progress = (rect.top + rect.height / 2 - viewportH / 2) / viewportH;
 
         const targetY = -progress * item.speed * 120;
-        item.currentY += (targetY - item.currentY) * 0.18;
+        item.currentY = targetY;
 
         const scaleVal = 1 + progress * item.scale;
 
