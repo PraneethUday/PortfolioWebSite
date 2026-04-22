@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  border-bottom: 3px solid #2A2A2A;
+  border-bottom: none;
 }
 
 .timeline {

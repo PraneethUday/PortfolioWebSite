@@ -55,6 +55,32 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "SecureHealthCareSystem – Role-Based Healthcare Platform",
+      tech: "Next.js 15, TypeScript, Supabase (PostgreSQL), WebRTC, Tailwind CSS",
+      description:
+        "A full-stack healthcare platform with 5-role RBAC and session-based authentication enforcing fine-grained route-level authorization. Enables peer-to-peer video consultations via WebRTC with Supabase Realtime signaling (sub-200ms latency), plus appointment scheduling, medical record management, and e-prescription workflows secured via Row-Level Security policies.",
+      github: "https://github.com/PraneethUday/SecureHealthCareSystem",
+      highlights: [
+        "5-Role RBAC",
+        "WebRTC Video",
+        "Row-Level Security",
+        "E-Prescriptions",
+      ],
+    },
+    {
+      title: "WPIP – AI-Powered Parametric Insurance for Gig Workers",
+      tech: "Next.js, React Native, FastAPI, XGBoost, Supabase, GDELT, OpenWeatherMap",
+      description:
+        "Parametric income-protection insurance for Indian gig delivery workers, auto-triggering claims via real-time weather, AQI, traffic, and GDELT-based curfew detection using fuzzy logic severity scoring. Features a two-stage NLP pipeline for unrest detection, an XGBoost premium engine trained on a 25-feature risk vector, and Isolation Forest fraud detection with GPS geo-polygon validation.",
+      github: "https://github.com/PraneethUday/WPIP",
+      highlights: [
+        "Parametric Insurance",
+        "XGBoost Risk Engine",
+        "Fraud Detection",
+        "NLP Pipeline",
+      ],
+    },
+    {
       title: "Navigation System – Interactive Web-Based Route Planner",
       tech: "Flask, Leaflet.js, OpenStreetMap",
       description:
@@ -141,7 +167,11 @@ export default function Projects() {
             >
               <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>
-                <span className="project-tech">{project.tech}</span>
+                <div className="project-tech-list">
+                  {project.tech.split(",").map((t, i) => (
+                    <span key={i} className="project-tech">{t.trim()}</span>
+                  ))}
+                </div>
               </div>
               <p className="project-description">{project.description}</p>
               <div className="project-highlights">

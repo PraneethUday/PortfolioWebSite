@@ -2,7 +2,7 @@ import "./Header.css";
 
 export default function Header() {
   return (
-    <header className="header">
+    <header className="header" id="home">
       <div className="hero-section">
         <h1 className="animated-name">
           <span className="name-letter">P</span>

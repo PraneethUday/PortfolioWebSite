@@ -1,4 +1,5 @@
 import Aurora from "./components/Aurora";
+import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -15,7 +16,8 @@ function App() {
         amplitude={1.0}
         blend={0.5}
       />
-      <div className="content">
+      <Navbar />
+      <div className="content" style={{ paddingTop: "64px" }}>
         <Header />
         <About />
         <Projects />
